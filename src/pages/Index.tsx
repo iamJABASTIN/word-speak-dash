@@ -1,11 +1,25 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { WordDisplay } from "@/components/WordDisplay";
+import { TimerDisplay } from "@/components/TimerDisplay";
 
 const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-background">
-      <div className="text-center">
-        <h1 className="mb-4 text-4xl font-bold">Welcome to Your Blank App</h1>
-        <p className="text-xl text-muted-foreground">Start building your amazing project here!</p>
+    <div className="min-h-screen bg-background p-6">
+      <div className="max-w-7xl mx-auto space-y-8">
+        {/* Header */}
+        <header className="text-center space-y-2 py-8">
+          <h1 className="text-4xl font-bold text-foreground">
+            Random Word Generator
+          </h1>
+          <p className="text-muted-foreground text-lg">
+            Practice your communication skills • Generate a word and speak about it for 2 minutes
+          </p>
+        </header>
+
+        {/* Main Content Grid */}
+        <div className="grid md:grid-cols-2 gap-6 items-stretch">
+          <WordDisplay />
+          <TimerDisplay />
+        </div>
       </div>
     </div>
   );
