@@ -1,5 +1,6 @@
 import { WordDisplay } from "@/components/WordDisplay";
 import { TimerDisplay } from "@/components/TimerDisplay";
+import { VoiceTranscription } from "@/components/VoiceTranscription";
 
 const Index = () => {
   return (
@@ -20,6 +21,9 @@ const Index = () => {
           <WordDisplay />
           <TimerDisplay />
         </div>
+
+        {/* Voice Transcription Section */}
+        <VoiceTranscription />
       </div>
     </div>
   );
