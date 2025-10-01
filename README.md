@@ -1,73 +1,73 @@
-# Welcome to your Lovable project
 
-## Project info
 
-**URL**: https://lovable.dev/projects/b14b8358-95f6-40ce-8956-02cdcbcac420
+# Word Speak Dash
 
-## How can I edit this code?
+A modern web app to practice impromptu speaking, articulation, and communication skills using random words, tongue twisters, and live speech transcription.
 
-There are several ways of editing your application.
+## Screenshots
 
-**Use Lovable**
+| Home (Random Word, Timer, Tongue Twister) | Live Transcription |
+|------------------------------------------|-------------------|
+| ![Home Screenshot](./screenshots/home.png) | ![Transcription Screenshot](./screenshots/transcription.png) |
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/b14b8358-95f6-40ce-8956-02cdcbcac420) and start prompting.
+## Features
 
-Changes made via Lovable will be committed automatically to this repo.
+- **Random Word Generator:** Instantly get a random word and its meaning to spark your speech or story.
+- **Timer:** Built-in timer to challenge yourself to speak for a set duration (e.g., 2 minutes).
+- **Tongue Twister Practice:** Shuffle and practice a wide variety of tongue twisters to improve articulation.
+- **Live Transcription:** Uses the Web Speech API to transcribe your speech in real time.
+- **Beautiful UI:** Responsive, modern design with animated dot grid background.
+- **Accessible:** Keyboard and screen reader friendly, with clear feedback and controls.
 
-**Use your preferred IDE**
+## Tech Stack
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- [React](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/) for fast development
+- [shadcn/ui](https://ui.shadcn.com/) for accessible, beautiful components
+- [Tailwind CSS](https://tailwindcss.com/) for styling
+- [Radix UI](https://www.radix-ui.com/) for primitives
+- [Lucide Icons](https://lucide.dev/) for icons
+- [React Query](https://tanstack.com/query/latest) for data fetching/caching
+- [Sonner](https://sonner.emilkowal.ski/) for toasts/notifications
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Getting Started
 
-Follow these steps:
+1. **Clone the repository:**
+   ```bash
+   git clone <YOUR_GIT_URL>
+   cd word-speak-dash
+   ```
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
+4. **Open your browser:**  
+   Visit [http://localhost:5173](http://localhost:5173) (or the port shown in your terminal).
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## Usage
 
-**Edit a file directly in GitHub**
+- Click "Generate Word" to get a new word and its meaning.
+- Use the timer to challenge yourself to speak about the word.
+- Try a random tongue twister to warm up your articulation.
+- Use the live transcription to see your speech recognized in real time.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## Deployment
 
-**Use GitHub Codespaces**
+You can deploy this app using any static hosting service (Vercel, Netlify, GitHub Pages, etc.) or via [Lovable](https://lovable.dev/).
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+## Customization
 
-## What technologies are used for this project?
+- Add or edit the word list in `WordDisplay.tsx`.
+- Add more tongue twisters in `TongueTwister.tsx`.
+- Adjust timer, UI, or add new features as you wish!
 
-This project is built with:
+## License
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/b14b8358-95f6-40ce-8956-02cdcbcac420) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+MIT
