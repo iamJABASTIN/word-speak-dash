@@ -1,6 +1,7 @@
 import { WordDisplay } from "@/components/WordDisplay";
 import { TimerDisplay } from "@/components/TimerDisplay";
 import { VoiceTranscription } from "@/components/VoiceTranscription";
+import { TongueTwister } from "@/components/TongueTwister";
 import DotGrid from "../components/DotGrid";
 
 const Index = () => {
@@ -37,8 +38,8 @@ const Index = () => {
               Random Word Generator
             </h1>
             <p className="text-muted-foreground text-lg">
-              Practice your communication skills • Generate a word and speak
-              about it for 2 minutes
+              Enhance your creative flow. Start with a single word and build a
+              coherent story around it.
             </p>
           </header>
 
@@ -46,6 +47,11 @@ const Index = () => {
           <div className="grid md:grid-cols-2 gap-6 items-stretch">
             <WordDisplay />
             <TimerDisplay />
+          </div>
+
+          {/* Tongue Twister Section */}
+          <div className="mt-6">
+            <TongueTwister />
           </div>
 
           {/* Voice Transcription Section */}

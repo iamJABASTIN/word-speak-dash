@@ -319,26 +319,39 @@ export const WordDisplay = () => {
         "bucket",
         "basket",
         "rope",
-        "stick",
       ];
-
       const randomWord = words[Math.floor(Math.random() * words.length)];
 
-      // Fetch definition from Free Dictionary API
-      const response = await fetch(
-        `https://api.dictionaryapi.dev/api/v2/entries/en/${randomWord}`
-      );
-
-      if (!response.ok) throw new Error("Failed to fetch word");
-
-      const data = await response.json();
-      const meanings = data[0]?.meanings[0]?.definitions[0]?.definition;
-
+      // Show the word instantly with a placeholder meaning
       setWordData({
         word: randomWord,
-        meaning: meanings || "A meaningful word to discuss and explore",
+        meaning: "Loading meaning...",
       });
 
+      // Fetch definition from Free Dictionary API in the background
+      try {
+        const response = await fetch(
+          `https://api.dictionaryapi.dev/api/v2/entries/en/${randomWord}`
+        );
+        if (response.ok) {
+          const data = await response.json();
+          const meanings = data[0]?.meanings[0]?.definitions[0]?.definition;
+          setWordData({
+            word: randomWord,
+            meaning: meanings || "A meaningful word to discuss and explore",
+          });
+        } else {
+          setWordData({
+            word: randomWord,
+            meaning: "A meaningful word to discuss and explore",
+          });
+        }
+      } catch (err) {
+        setWordData({
+          word: randomWord,
+          meaning: "A meaningful word to discuss and explore",
+        });
+      }
       toast.success("New word generated!");
     } catch (error) {
       toast.error("Failed to fetch word. Please try again.");
