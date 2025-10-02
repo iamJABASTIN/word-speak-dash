@@ -17,6 +17,6 @@ export default defineConfig(({ mode }) => ({
       "@": path.resolve(__dirname, "./src"),
     },
   },
-  // 👇 This is required for GitHub Pages
-  base: "/word-speak-dash/",
+  // ✅ Use correct base for dev vs prod
+  base: mode === "production" ? "/word-speak-dash/" : "/",
 }));

@@ -13,7 +13,8 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <BrowserRouter>
+      {/* 👇 Add basename for GitHub Pages */}
+      <BrowserRouter basename="/word-speak-dash">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="*" element={<NotFound />} />

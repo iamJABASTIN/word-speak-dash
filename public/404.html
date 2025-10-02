@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Redirecting...</title>
+    <script>
+      // Redirect all 404 requests to index.html (for React Router)
+      var redirectTo = window.location.pathname;
+      sessionStorage.setItem("redirect", redirectTo);
+      window.location.replace("/word-speak-dash/");
+    </script>
+  </head>
+  <body>
+    Redirecting...
+  </body>
+</html>
